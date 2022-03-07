@@ -1,0 +1,146 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "q",
+      "author": "typicode"
+    },
+    {
+      "title": "www",
+      "body": "www",
+      "id": 2
+    },
+    {
+      "title": "231",
+      "body": "231",
+      "id": 3
+    },
+    {
+      "title": "1111234567890p-",
+      "body": "1111234567890p-",
+      "id": 4
+    },
+    {
+      "title": "11",
+      "body": "11",
+      "id": 5
+    },
+    {
+      "title": "7",
+      "body": "7",
+      "id": 6
+    },
+    {
+      "title": "8",
+      "body": "8",
+      "id": 7
+    },
+    {
+      "title": "2345",
+      "body": "2345",
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "username": "admin",
+      "password": "123",
+      "id": "admin"
+    },
+    {
+      "username": "user",
+      "password": "123",
+      "id": "user"
+    },
+    {
+      "username": "lala",
+      "password": "123",
+      "id": "lala"
+    },
+    {
+      "username": "kuuue",
+      "password": "123",
+      "id": "kuuue"
+    },
+    {
+      "username": "Larthria",
+      "password": "321",
+      "id": "Larthria"
+    },
+    {
+      "username": "Pop",
+      "password": "123",
+      "id": "Pop"
+    },
+    {
+      "username": "Pipa",
+      "password": "3333",
+      "id": "Pipa"
+    },
+    {
+      "username": "Orange2233",
+      "password": "123",
+      "id": "Orange2233"
+    },
+    {
+      "username": "lilij",
+      "password": "222",
+      "id": "lilij"
+    },
+    {
+      "username": "APELSIN",
+      "password": "123",
+      "id": "APELSIN"
+    },
+    {
+      "username": "dim.bondar",
+      "password": "123",
+      "id": "dim.bondar"
+    },
+    {
+      "username": "jjin",
+      "password": "123",
+      "id": "jjin"
+    },
+    {
+      "username": "adminn",
+      "password": "1",
+      "id": "adminn"
+    },
+    {
+      "username": "yuyuy",
+      "password": "123",
+      "id": "yuyuy"
+    },
+    {
+      "username": "1",
+      "password": "12",
+      "id": "1"
+    },
+    {
+      "username": "adminnn",
+      "password": "2",
+      "id": "adminnn"
+    },
+    {
+      "username": "ANIME",
+      "password": "123",
+      "id": "ANIME"
+    },
+    {
+      "username": "sqsq",
+      "password": "1111",
+      "id": "sqsq"
+    }
+  ]
+}
