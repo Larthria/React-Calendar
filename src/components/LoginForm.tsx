@@ -1,5 +1,5 @@
   import React, { useState } from 'react'
-import { Button, Form, Input } from 'antd';
+import { Button, Form, Input, Modal } from 'antd';
 import { rules } from '../utils/rules';
 import { useDispatch } from 'react-redux';
 import { AuthActionCreators } from '../store/reducers/auth/action-creators';
@@ -8,10 +8,15 @@ import { useActions } from '../hooks/useActions';
 import { UserService } from '../api/UserService';
 import { IUser } from '../models/IUser';
 
-export default function LoginForm() {
+interface LoginFormProps {
+  modalVisible:boolean,
+  setModalVisible:(boolean:boolean) => void,
+  users:IUser[] | undefined
+}
+
+export default function LoginForm({users,setModalVisible,modalVisible}:LoginFormProps) {
   const dispatch = useDispatch();
   const {error,isLoading} = useTypedSelector(state => state.authReducer);
-  const {data:users} = UserService.useFetchAllUsersQuery([] as IUser[]);
   const [username,setUsername] = useState('');
   const [password,setPassword] = useState('');
   const {login} = useActions();
@@ -33,11 +38,16 @@ export default function LoginForm() {
       >
         <Input.Password value={password} onChange={e => setPassword(e.target.value)} />
       </Form.Item>
-       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+      <Form.Item wrapperCol={{ offset: 5, span: 16 }}>
         <Button type="primary" htmlType="submit" loading={isLoading}>
           Войти
         </Button>
+        <Button type="primary" style={{marginLeft:'5px'}} onClick={() => {setModalVisible(true)}}>
+          Регистрация
+        </Button>
       </Form.Item>
     </Form>
+
+
   )
 }

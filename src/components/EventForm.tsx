@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+  import React, { useState } from 'react'
 import { Button, DatePicker, Form, Input, Row, Select } from 'antd';
 import { rules } from '../utils/rules';
 import { IUser } from '../models/IUser';

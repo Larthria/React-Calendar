@@ -5,13 +5,15 @@ import EventForm from "../components/EventForm";
 import { IEvent } from '../models/IEvent';
 import { useActions } from '../hooks/useActions';
 import { useTypedSelector } from '../hooks/useTypedSelector';
+import { IUser } from '../models/IUser';
+import { UserService } from '../api/UserService';
 
 export default function Event() {
-	const [modalVisible,setModalVisible] = useState(false);
-  const {fetchGuests,fetchEvents} = useActions();
+  const [modalVisible,setModalVisible] = useState(false);
+  const {fetchEvents,createEvent,setGuests} = useActions();
+  const {data:fetchedUsers} = UserService.useFetchAllUsersQuery([] as IUser[]);
   const {guests,events} = useTypedSelector(state => state.eventReducer);
   const {user} = useTypedSelector(state => state.authReducer);
-  const {createEvent} = useActions();
 
   const addNewEvent = (event:IEvent) => {
   	setModalVisible(false);
@@ -19,7 +21,10 @@ export default function Event() {
   }
  
 	useEffect(() => {
-		fetchGuests();
+		if(fetchedUsers){
+		  setGuests(fetchedUsers);
+		}
+		
 		fetchEvents(user.username)
 	},[])
 	return (

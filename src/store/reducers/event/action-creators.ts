@@ -8,16 +8,6 @@ import { UserService } from '../../../api/UserService';
 export const EventActionCreators = {
 	setGuests:(payload:IUser[]):SetGuestsAction => ({type:EventActionEnum.SET_GUESTS,payload}),
 	setEvents:(payload:IEvent[]):SetEventsAction => ({type:EventActionEnum.SET_EVENTS,payload}),
-	fetchGuests:(guests) => async (dispatch:AppDispatch) => {
-    try{
-      
-
-      //dispatch(EventActionCreators.setGuests(guests.data))
-    }
-    catch(e){
-    	 console.log(e)
-    }
-	},
   createEvent:(event:IEvent,username:string) => async (dispatch:AppDispatch) => {
     try{
       const events = localStorage.getItem('events') || '[]';
